@@ -7,7 +7,7 @@ import {BrowserRouter as Router, Route} from 'react-router-dom' ;
 import Main from 'Main';
 import Weather from 'Weather';
 import About from 'About';
-import Example from 'Example';
+import Examples from 'Examples';
 
 //extra codes if needed
 
@@ -18,7 +18,7 @@ ReactDOM.render(
         <Main>
           <Route exact path="/" component={Weather}/>
           <Route path="/about" component={About}/>
-          <Route path="/example" component={Example}/>
+          <Route path="/examples" component={Examples}/>
         </Main>
       </div>
   </Router>,
