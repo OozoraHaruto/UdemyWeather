@@ -11,6 +11,10 @@ import Examples from 'Examples';
 
 //extra codes if needed
 
+//load foundation
+require('style-loader!css-loader!foundation-sites/dist/css/foundation.min.css');
+$(document).foundation();
+
 //render
 ReactDOM.render(
   <Router>
