@@ -3,7 +3,7 @@ import React from 'react';
 var Example = (props) =>{
   return (
     <div>
-      <h2>Example Component</h2>
+      <h2>Example Component!</h2>
     </div>
   )
 }
