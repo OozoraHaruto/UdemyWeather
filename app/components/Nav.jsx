@@ -1,11 +1,21 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
+import queryString from 'query-string';
 
 class Nav extends React.Component{
   onSearch = (e) =>{
     e.preventDefault();
-    alert('Not wired up!');
+
+    var location = this.search.value;
+
+    if (location.length > 0){
+      this.search.value = '';
+      
+      var encodedLocation = queryString.stringify({location: location});
+      window.location.hash = '#/?' + encodedLocation
+    }
   };
+
   render(){
     return (
       <div className="top-bar">
@@ -20,7 +30,7 @@ class Nav extends React.Component{
         <div className="top-bar-right">
           <form onSubmit={this.onSearch}>
             <ul className="menu">
-              <li><input type="search" placeholder="City Name"/></li>
+              <li><input type="search" ref={(ref) => this.search = ref} placeholder="City Name"/></li>
               <li><input type="submit" className="button" value="Get Weather"/></li>
             </ul>
           </form>
