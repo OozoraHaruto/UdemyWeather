@@ -4,7 +4,7 @@ import {NavLink} from 'react-router-dom';
 var Examples = (props) =>{
   return (
     <div>
-      <h1 className="text-center">Example</h1>
+      <h1 className="text-center pageTitle">Example</h1>
       <p>Here are a few example location to try out</p>
       <ol>
         <li><NavLink to="/?location=Singapore,SG">Singapore, Singapore</NavLink></li>

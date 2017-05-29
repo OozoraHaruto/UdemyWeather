@@ -4,7 +4,7 @@ import Nav from 'Nav';
 var About = (props) =>{
   return (
     <div>
-      <h1 className="text-center">About</h1>
+      <h1 className="text-center pageTitle">About</h1>
       <p>This is a weather application built on React. I have bult this for The Complete React Web App Developer Course</p>
       <p>Here are some of the tools I used:</p>
       <table className="hover stacked table-scroll ">
