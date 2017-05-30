@@ -1,7 +1,7 @@
 //Modules
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {HashRouter as Router, Route} from 'react-router-dom' ;
+import {HashRouter as Router, Switch, Route} from 'react-router-dom' ;
 
 //Compents
 import Main from 'Main';
@@ -22,9 +22,11 @@ require('style-loader!css-loader!applicationStyles');
 ReactDOM.render(
   <Router>
         <Main>
-          <Route exact path="/" component={Weather}/>
-          <Route exact path="/about" component={About}/>
-          <Route path="/example" component={Examples}/>
+          <Switch>
+            <Route exact path="/" component={Weather}/>
+            <Route exact path="/about" component={About}/>
+            <Route path="/example" component={Examples}/>
+          </Switch>
         </Main>
   </Router>,
   document.getElementById('app')
